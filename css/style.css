@@ -1,105 +1,101 @@
-/**
- * Add your custom styles below
- * 
- * Remember: 
- * - Be organised, use comments and separate your styles into meaningful chunks
- *    for example: General styles, Navigation styles, Hero styles, Footer etc.
- * 
- */
- /*General styles*/
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+/* General styles */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
-  padding: 10%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #333;
 }
 
 
-/*Header styles*/
+/* Header styles */
+.header {
+  /* border: 1px solid red; */
+  width: 85%;
+  margin: 4rem auto
+}
 
-
-h1 {
-  text-align: center;
+.header h1 {
   text-transform: uppercase;
-  margin: 2rem;
-}
-header {
-  padding: 5rem;
+  text-align: center;
+  padding: 2rem 0;
 }
 
+.header__exp {
+  text-align: justify;
+}
 
-/*Main styles*/
+/* Main styles */
+
 main {
-  background-color: rgba(128, 91, 91, 0.015);
+  width: 90%;
+  margin: 2rem auto;
 }
-.articles article {
-  display: grid;
-  grid-template-columns:1fr 5fr;
-  grid-gap: 1rem;
+
+main article {
+  /* border: 1px solid red; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
-  margin: 2rem;
-  padding: 1rem;
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.28);
-  
+  margin: 2rem auto;
+  height: 400px;
+
 }
-.articles img{
-  border-radius: 2rem;
-  grid-column: 1/2;
-  grid-row: 1/4;
-  max-width: 400px;
+
+.article__explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.articles a{
-  text-decoration: none;
-  border: none;
-  font-weight: 600;
+
+.article__explanation h2 {
+  padding: 3rem 0;
+
+}
+
+.article__explanation p {
+  text-align: justify;
   padding: 1rem 2rem;
-  margin: 2rem;
-  border-radius: 8px;
+}
+
+.article__explanation button {
   background-color: rgb(216, 69, 69);
+  border: none;
+  border-radius: 8px;
   color: #fff;
- 
-}
-.articles a:hover {
-  background-color: rgba(216, 69, 69, 0.699);
-  transition: 0.3s ease-in-out;
-}
-.articles h2 {
-  
-  text-align: center;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   margin: 2rem;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
 }
 
-.articles p {
-  padding: 2rem;
-}
-.other_sections {
-  text-align: center;
-  margin: 3rem;
-}
-article:first-child{
- background-color: rgba(109, 19, 19, 0.336);
- color: #fff;
- font-size: 1.4rem;
- 
-}
-article:first-child h2 {
-  font-size: 2rem;
+.article__explanation button:hover {
+  opacity: 0.8;
+
 }
 
-/*Footer styles*/
-
-hr {
-  margin: 2rem 0;
+/* opcity:0.8
+ transition: 0.3s ease; */
+img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  object-position: left;
+  padding: 0 24px;
 }
-footer {
-  background-color: rgb(59, 15, 15);
-  border-radius: 10px;
-  color: #fff;
-  padding: 5rem 2rem;
+
+main article:first-child {
+  background-color: rgb(255, 197, 197);
+  font-size: 1.2rem;
 }
